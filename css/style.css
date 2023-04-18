@@ -1,0 +1,19 @@
+.carousel {
+    width: 100%;
+    opacity: .5;
+    z-index: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-link{
+    color:#4e4644;
+}
+
+.navbar {
+    position: fixed;
+    margin-left: 5%;
+    z-index: 4;
+}
