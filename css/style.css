@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 /* NAVBAR */
 .nav-link{
     color:#4e4644;
@@ -22,263 +24,74 @@
 
 /* PRODUCTS PAGE */
 
-.card {
-    border-style: none;
-    padding: 2%;
+.container .card
+{
+    max-width: 300px;
+    height: 215px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
 }
-
-.container .card .slide {
-    width: 300px;
-    height: 200px;
-    transition: 0.5s;
+.container .card:hover
+{
+    height: 450px;
 }
-
-.container .card .slide.slide1 {
+.container .card .imgContainer
+{
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width:250px;
+    height:250px;
+    top:-50px;
+    left:10px;
     z-index: 1;
-    transition: .7s;
-    transform: translateY(50px);
 }
-
-.container .card:hover .slide.slide1{
-    transform: translateY(0px);
+.container .card .imgContainer img
+{
+    max-width: 100%;
+    border-radius: 4px;
 }
-
-.container .card .slide.slide2 {
+.container .card .content
+{
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: .5s;
-    transform: translateY(-100px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color:#111;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover .content
+{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
 }
 
-.container .card:hover .slide.slide2{
-    transform: translateY(0);
+@media (max-width: 330px){
+    .container .card .imgContainer{
+        left: -2px;
+    }
+}
+/* LOGIN PAGE */
+.bg-img {
+    background-image: url("../images/carousel/IMG_4576.jpg");
+}
+/* REGISTRATION PAGE*/
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
 }
 
-.container .card .slide.slide2::after{
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 4px;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+.card-registration .select-arrow {
+    top: 13px;
 }
 
-.container .card .slide.slide2 .content p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #414141;
+h4, p {
+    z-index: 5;
 }
-
-.container .card .slide.slide2 .content h3 {
-    margin: 0 0 0 0;
-    padding: 0;
-    font-size: 24px;
-    text-align: center;
-    color: #414141;
-} 
-
-/* REGISTRATION PAGE */
-.container .cover{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 50%;
-    z-index: 6;
-    opacity: .7;
-    transition: all 1s ease;
-    transform-origin: left;
-    transform-style: preserve-3d;
-    background-image: linear-gradient(white
-    );
-  }
-  .container #flip:checked ~ .cover{
-    transform: rotateY(-180deg);
-  }
-   .container .cover .front,
-   .container .cover .back{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
-  .cover .back{
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-  }
-  .container .cover::before,
-  .container .cover::after{
-    content: '';
-    position: relative;
-    height: 100%;
-    width: 100%;
-    opacity: 0.5;
-    z-index: 12;
-  }
-  .container .cover::after{
-    opacity: 0.3;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-  }
-  .container .cover img{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: 0;
-  }
-  .container .cover .text{
-    position: absolute;
-    z-index: 130;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .cover .text .text-1,
-  .cover .text .text-2{
-    font-size: 26px;
-    font-weight: 600;
-    color: #fff;
-    text-align: center;
-  }
-  .cover .text .text-2{
-    font-size: 15px;
-    font-weight: 500;
-  }
-  .container .forms{
-    height: 100%;
-    width: 100%;
-    background: #fff;
-  }
-  .container .form-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .form-content .login-form,
-  .form-content .signup-form{
-    width: calc(100% / 2 - 25px);
-  }
-  .forms .form-content .title{
-    position: relative;
-    font-size: 24px;
-    font-weight: 500;
-    color: #333;
-  }
-  .forms .form-content .title:before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 25px;
-    background: #fddcd1;
-  }
-  .forms .signup-form  .title:before{
-    width: 20px;
-  }
-  .forms .form-content .input-boxes{
-    margin-top: 30px;
-  }
-  .forms .form-content .input-box{
-    display: flex;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-    margin: 10px 0;
-    position: relative;
-  }
-  .form-content .input-box input{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    padding: 0 30px;
-    font-size: 16px;
-    font-weight: 500;
-    border-bottom: 2px solid rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-  }
-  .form-content .input-box input:focus,
-  .form-content .input-box input:valid{
-    border-color: #fddcd1;
-  }
-  .form-content .input-box i{
-    position: absolute;
-    color: #fddcd1;
-    font-size: 17px;
-  }
-  .forms .form-content .text{
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-  }
-  .forms .form-content .text a{
-    text-decoration: none;
-  }
-  .forms .form-content .text a:hover{
-    text-decoration: underline;
-  }
-  .forms .form-content .button{
-    color: #fff;
-    margin-top: 40px;
-  }
-  .forms .form-content .button input{
-    color: #fff;
-    background: #fddcd1;
-    border-radius: 6px;
-    padding: 0;
-    cursor: pointer;
-    transition: all 0.4s ease;
-  }
-  .forms .form-content .button input:hover{
-    background: #fddcd1;
-  }
-  .forms .form-content label{
-    color: #fddcd1;
-    cursor: pointer;
-  }
-  .forms .form-content label:hover{
-    text-decoration: underline;
-  }
-  .forms .form-content .login-text,
-  .forms .form-content .sign-up-text{
-    text-align: center;
-    margin-top: 25px;
-  }
-  .container #flip{
-    display: none;
-  }
-  @media (max-width: 730px) {
-    .container .cover{
-      display: none;
-    }
-    .form-content .login-form,
-    .form-content .signup-form{
-      width: 100%;
-    }
-    .form-content .signup-form{
-      display: none;
-    }
-    .container #flip:checked ~ .forms .signup-form{
-      display: block;
-    }
-    .container #flip:checked ~ .forms .login-form{
-      display: none;
-    }
-  }
