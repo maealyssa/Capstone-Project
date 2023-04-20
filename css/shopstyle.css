@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+h2 {
+    display: flex;
+    justify-content: center;
+}
 /* NAVBAR */
 .nav-link{
     color:#4e4644;
@@ -12,15 +16,15 @@
 }
 
 .navbar {
-    padding-left: 2%;
     z-index: 98;
-    background-image: linear-gradient(#fddcd1, white);
+    padding: 2%;
     margin-bottom: 5%;
 }
 
 .cart {
-    padding-right: 10%;
+    padding-left: 70%;
 }
+
 
 /* PRODUCT CARDS */
 .container .card {
