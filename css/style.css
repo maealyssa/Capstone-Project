@@ -14,7 +14,6 @@
 .navbar {
     padding-left: 2%;
     z-index: 98;
-    background-image: linear-gradient(#fddcd1, white);
     margin-bottom: 5%;
 }
 
@@ -23,9 +22,12 @@
 }
 
 /* LOGIN PAGE */
-.bg-img {
-    background-image: url("../images/carousel/IMG_4576.jpg");
+.login-page {
+    background-image: url(../images/carousel/IMG_4450.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 /* REGISTRATION PAGE*/
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
     font-size: 1rem;
@@ -40,4 +42,38 @@
 
 h4, p {
     z-index: 5;
+}
+
+.cascading-right {
+    margin-right: -50px;
+}
+
+@media (max-width: 991.98px) {
+    .cascading-right {
+      margin-right: 0;
+    }
+}
+
+
+/* CHECKOUT PAGE */
+body {
+    margin-top:20px;
+    background-image: linear-gradient(white, #eee);
+}
+
+.ui-w-40 {
+    width: 40px !important;
+    height: auto;
+}
+
+.ui-product-color {
+    display: inline-block;
+    overflow: hidden;
+    margin: .144em;
+    width: .875rem;
+    height: .875rem;
+    border-radius: 10rem;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+    vertical-align: middle;
 }
