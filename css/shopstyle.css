@@ -51,8 +51,8 @@ h2 {
     border-radius: 4px;
 }
 
-.container .card .content {
-
+.container .card .content
+{
     position: relative;
     margin-top: -140px;
     padding: 10px 15px;
@@ -77,7 +77,6 @@ h2 {
     margin-top: -40px;
     transition-delay: 0.3s;
 }
-
 
 
 @media (max-width: 330px){
